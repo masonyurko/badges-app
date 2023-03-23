@@ -8,13 +8,7 @@
   <base href="/">
 
   <style>
-    html,
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: sans-serif;
-      background-color: #ededed;
-    }
+    
   </style>
   <title>badges-app</title>
 </head>
@@ -23,6 +17,18 @@
   <badges-app></badges-app>
 
   <script type="module" src="./src/badges-app.js"></script>
+  <script>
+    
+    function dqs(sel) {
+      return document.querySelector(sel);
+    }
+    
+    // input event
+    dqs('#getme').addEventListener('input', (e) => {
+      dqs('.input').innerText = e.target.value;
+    });
+
+  </script>
 </body>
 
 </html>

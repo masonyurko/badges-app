@@ -1,6 +1,7 @@
 import { html } from 'lit';
 import '../src/badges-app.js';
 
+
 export default {
   title: 'BadgesApp',
   component: 'badges-app',

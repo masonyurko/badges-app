@@ -1,88 +1,81 @@
 import { LitElement, html, css } from 'lit';
 
-const logo = new URL('../assets/open-wc-logo.svg', import.meta.url).href;
 
 class BadgesApp extends LitElement {
   static properties = {
-    header: { type: String },
+    searchBoxDesc: { type: String },
+    badgesDesc: {type: String}
   };
 
-  static styles = css`
-    :host {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      font-size: calc(10px + 2vmin);
-      color: #1a2b42;
-      max-width: 960px;
-      margin: 0 auto;
-      text-align: center;
-      background-color: var(--badges-app-background-color);
-    }
-
-    main {
-      flex-grow: 1;
-    }
-
-    .logo {
-      margin-top: 36px;
-      animation: app-logo-spin infinite 20s linear;
-    }
-
-    @keyframes app-logo-spin {
-      from {
-        transform: rotate(0deg);
-      }
-      to {
-        transform: rotate(360deg);
-      }
-    }
-
-    .app-footer {
-      font-size: calc(12px + 0.5vmin);
-      align-items: center;
-    }
-
-    .app-footer a {
-      margin-left: 5px;
-    }
-  `;
 
   constructor() {
     super();
-    this.header = 'My app';
+    this.searchBoxDesc = 'Explore our content in a self guided manner. Want us to guide you through learning new skills? Try out Missions. Looking for other people with similar focus? Find them in Groups. Interested in viewing all the options within a certain subject area? You can do that with Topics.';
+    this.badgesDesc = 'Looking for something brand spankin new? Here are the most recently added badges?'
+    this.
   }
+
+  static styles = css`
+      .search-container {
+      margin: 10px;
+      padding-top: 20px;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-bottom: 10px;
+      border: solid black;
+      background-color: light grey;
+      font-family: sans-serif;
+      }
+
+
+
+      input {
+        padding: 5px;
+        display: block;
+        border: solid black;
+        width: 300px;
+      }
+
+      .search-desc {
+        padding-bottom: 15px;
+      }
+
+      .badges-container {
+      margin: 10px;
+      padding: 10px;
+      border: solid black;
+      background-color: light grey;
+      font-family: sans-serif;
+      }
+
+      
+
+      
+
+
+  `;
 
   render() {
     return html`
       <main>
-        <div class="logo"><img alt="open-wc logo" src=${logo} /></div>
-        <h1>${this.header}</h1>
+      
+      <div class="app-container">
+        <div class="search-container">
+          <div class="search-desc">${this.searchBoxDesc}</div>
+          <input type="text" id="getme" placeholder="Search Content, Topics and People" />
+        </div>
+        
+        <div class="badges-container">
+          <label>${this.badgesDesc}</label>
 
-        <p>Edit <code>src/BadgesApp.js</code> and save to reload.</p>
-        <a
-          class="app-link"
-          href="https://open-wc.org/guides/developing-components/code-examples/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Code examples
-        </a>
+        </div>
+      </div>
+
       </main>
-
-      <p class="app-footer">
-        🚽 Made with love by
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://github.com/open-wc"
-          >open-wc</a
-        >.
-      </p>
     `;
   }
+
+  
 }
 
 customElements.define('badges-app', BadgesApp);
