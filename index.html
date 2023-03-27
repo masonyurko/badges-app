@@ -13,7 +13,7 @@
       margin: 10px;
       padding: 0;
       font-family: sans-serif;
-      background-color: rgba(0, 0, 0, 0);
+      background-color: #e9ecf3;
     }
 
     div {
@@ -23,8 +23,7 @@
     h1 {
       color: #333333;
       font-size: 36px;
-      margin-top: 0;
-      margin-bottom: 20px;
+      margin: 0 0 20px;
     }
 
     h1, h2, h3, h4, h5, h6 {
@@ -55,10 +54,6 @@
       padding: 10px;
       box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.3);
     }
-
-      .search .search-container .search-form {
-        border: 0;
-      }
 
     .page-content-wrapper {
       padding: 12px 20px 15px 20px; 
@@ -104,28 +99,59 @@
     .main-container {
       margin-top: 0px;
       margin-bottom: 25px;
-      padding: 0px;
+      padding: 12px 20px 15px;
       border-radius: 4px;
     }
 
-    .page-header {
+
+      .container-body {
+        font-size: 14px;
+        font-family: "effra", sans-serif;
+        color: #333333;
+        padding: 8px 0px 0px;
+
+      }
+
+    .page-header-navbar {
       z-index: 9995;
       height: auto;
       background: #fff;
       border-bottom: 1px solid #e9ecf3;
       width: 100%;
-      padding: 0 20px 0 20px;
+      padding: 0;
       margin: 0;
       height: 75px;
       filter: none;
       background-image: none;
     }
 
-    .page-logo .page-header{
+    .page-logo .page-header-navbar{
       font-weight: bold;
       font-size: 1.3em;
       color: #666666;
 
+    }
+
+    .container-body .main-container{
+      padding-top: 8px;
+    }
+
+    .page-container {
+      padding: 20px 20px 0 20px;
+      margin-top: 75px;
+    }
+
+    .bottom-container {
+      margin: 0 0 25px;
+      padding: 12px 20px 15px;
+    }
+
+    .bottom-title {
+      padding: 0;
+      min-height: 48px;
+      border-bottom: 1px solid #eee;
+      margin-bottom: 10px;
+      border-radius: 4px 4px 0 0;
     }
   </style>
   <title>badges-app</title>
@@ -133,7 +159,7 @@
 
 <body class="badges-app">
   <badges-app></badges-app>
-  <header class="page-header">
+  <header class="page-header-navbar">
     <div class="page-logo">
       <a href="https://badgesapp.psu.edu/">
         <span aria-hidden="true">Penn State Digital Badges</span>
@@ -147,6 +173,8 @@
         <h1>Explore</h1>
       </div>
   </div>
+  <main class="page-container" id="main">
+    \\ sidebar menu (yet to be built)
   <div class="main-container">
     <div class="container-body">
       <div class="h3">
@@ -167,8 +195,15 @@
       </simple-icon>
   <input type="text" class="form-control" id="q" name="q" placeholder="Search Content, Topics, and People" ng-model="searchData.q" style>
 </div>
+</div>
 </form>
 </div>
+<div class="bottom-container">
+  <h2 class="bottom-caption">
+    Looking for something brand spankin' new? Here are the most recently added badges!
+  </h2>
+</div>
+</main>
 </body>
 
 </html>
