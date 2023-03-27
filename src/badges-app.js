@@ -1,4 +1,6 @@
 import { LitElement, html, css } from 'lit';
+import '@lrnwebcomponents/simple-icon/simple-icon.js';
+import '@lrnwebcomponents/simple-icon/lib/simple-icons.js';
 
 const logo = new URL('../assets/open-wc-logo.svg', import.meta.url).href;
 
@@ -68,19 +70,8 @@ class BadgesApp extends LitElement {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Code examples
         </a>
       </main>
-
-      <p class="app-footer">
-        🚽 Made with love by
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://github.com/open-wc"
-          >open-wc</a
-        >.
-      </p>
     `;
   }
 }

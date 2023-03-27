@@ -10,19 +10,164 @@
   <style>
     html,
     body {
-      margin: 0;
+      margin: 10px;
       padding: 0;
       font-family: sans-serif;
-      background-color: #ededed;
+      background-color: rgba(0, 0, 0, 0);
+    }
+
+    div {
+      display: block;
+    }
+
+    h1 {
+      color: #333333;
+      font-size: 36px;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: "effra", sans-serif;
+      font-weight: 300;
+    }
+
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+      font-family: inherit;
+      font-weight: 500;
+      line-height: 1.1;
+      color: inherit;
+    }
+
+    h3, .h3 {
+      font-size: 24px;
+    }
+
+    h1, .h1, h2, .h2, h3, .h3 {
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    .search {
+      margin-top: 30px;
+      margin-right: 5px;
+      margin-left: 5px;
+      padding: 10px;
+      box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.3);
+    }
+
+      .search .search-container .search-form {
+        border: 0;
+      }
+
+    .page-content-wrapper {
+      padding: 12px 20px 15px 20px; 
+      background-color: #fff;
+    }
+
+    a {
+      text-shadow: none;
+      color: #337ab7;
+      text-decoration: none;
+      background-color: transparent;
+    }
+
+    a:-webkit-any-link {
+      color: -webkit-link;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    .form-control {
+      display: block;
+      width: 100%;
+      height: 34px;
+      padding: 6px 12px;
+      font-size: 14px;
+      line-height: 1.428571429;
+      color: #555;
+      background-color: #fff;
+      background-image: none;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+      box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+      -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+      -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+      transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    }
+
+    .form-control .search-input {
+      display: table-cell;
+    }
+
+    .main-container {
+      margin-top: 0px;
+      margin-bottom: 25px;
+      padding: 0px;
+      border-radius: 4px;
+    }
+
+    .page-header {
+      z-index: 9995;
+      height: auto;
+      background: #fff;
+      border-bottom: 1px solid #e9ecf3;
+      width: 100%;
+      padding: 0 20px 0 20px;
+      margin: 0;
+      height: 75px;
+      filter: none;
+      background-image: none;
+    }
+
+    .page-logo .page-header{
+      font-weight: bold;
+      font-size: 1.3em;
+      color: #666666;
+
     }
   </style>
   <title>badges-app</title>
 </head>
 
-<body>
+<body class="badges-app">
   <badges-app></badges-app>
-
-  <script type="module" src="./src/badges-app.js"></script>
+  <header class="page-header">
+    <div class="page-logo">
+      <a href="https://badgesapp.psu.edu/">
+        <span aria-hidden="true">Penn State Digital Badges</span>
+      </a>
+  </header>
+<div class="page-content-wrapper">
+  <div class="page-content">
+    <div class="page-header">
+      <div class="page-title">
+        <h1>Explore</h1>
+      </div>
+  </div>
+  <div class="main-container">
+    <div class="container-body">
+      <div class="h3">
+        " Explore our content in a self-guided manner. Want us to guide you through learning new skills? Try out "
+        <a href="https://badgesapp.psu.edu/explore/missions">Missions</a>
+        ". Looking for other people with similar focus? Find them in "
+        <a href="https://badgesapp.psu.edu/explore/groups">Groups</a>
+        ". Interested in viewing all the options within a certain subject area? You can do that with "
+        <a href="https://badgesapp.psu.edu/explore/topics">Topics</a>
+        ". "
+      </div>
+    </div>
+<div class="search">
+  <div class="search-container">
+    <form class="search-form" id="searchForm" ng-submit="search(true)">
+      <div class="search-input">
+      <simple-icon accent-color="blue-grey" icon="search">
+      </simple-icon>
+  <input type="text" class="form-control" id="q" name="q" placeholder="Search Content, Topics, and People" ng-model="searchData.q" style>
+</div>
+</form>
+</div>
 </body>
 
 </html>
