@@ -56,6 +56,5 @@
     "singleQuote": true,
     "arrowParens": "avoid"
   },
-
   "customElements": "custom-elements.json"
 }
