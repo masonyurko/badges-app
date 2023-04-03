@@ -8,18 +8,6 @@ class BadgesApp extends LitElement {
     };
   }
 
-  static styles = css`
-    .results {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-left: 10px;
-      margin-right: 10px;
-    }
-  `;
-
   constructor() {
     super();
     this.badges = [];
@@ -39,6 +27,18 @@ class BadgesApp extends LitElement {
         this.badges = data;
       });
   }
+
+  static styles = css`
+    .results {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  `;
 
   render() {
     return html`
