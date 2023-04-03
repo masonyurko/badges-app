@@ -11,10 +11,10 @@ class BadgesApp extends LitElement {
   constructor() {
     super();
     this.badges = [];
-    this.populate();
+    this.updateBadge();
   }
 
-  populate() {
+  updateBadge() {
     const address = '../api/badges';
     fetch(address)
       .then(response => {
