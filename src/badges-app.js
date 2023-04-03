@@ -1,23 +1,9 @@
 import { LitElement, html, css } from 'lit';
-import '@lrnwebcomponents/simple-icon/simple-icon.js';
-import '@lrnwebcomponents/simple-icon/lib/simple-icons.js';
+import './badges-list.js';
 
 class BadgesApp extends LitElement {
   static get properties() {
     return {
-      badgeTitle: {
-        type: String,
-        reflect: true,
-      },
-      badgeDesc: {
-        type: String,
-      },
-      badgeImg: {
-        type: String,
-      },
-      author: {
-        type: String,
-      },
       badges: { type: Array },
     };
   }

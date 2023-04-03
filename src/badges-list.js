@@ -1,4 +1,6 @@
 import { LitElement, html, css } from 'lit';
+import '@lrnwebcomponents/simple-icon/simple-icon.js';
+import '@lrnwebcomponents/simple-icon/lib/simple-icons.js';
 import './badges-app.js';
 
 export class BadgesList extends LitElement {
@@ -15,14 +17,6 @@ export class BadgesList extends LitElement {
       author: { type: String },
       accent: { type: String },
     };
-  }
-
-  constructor() {
-    super();
-    this.badgeTitle = 'badge 1';
-    this.badgeDesc = 'desc of badge 1';
-    this.badgeImg = 'img of badge 1';
-    this.author = 'author1';
   }
 
   static get styles() {
@@ -92,6 +86,14 @@ export class BadgesList extends LitElement {
         padding: 2px 2px 2px 5px;
       }
     `;
+  }
+
+  constructor() {
+    super();
+    this.badgeTitle = 'badge 1';
+    this.badgeDesc = 'desc of badge 1';
+    this.badgeImg = 'img of badge 1';
+    this.author = 'author1';
   }
 
   render() {
