@@ -1,4 +1,4 @@
-import { LitElement, html, css } from 'lit-element';
+import { LitElement, html, css } from 'lit';
 import './badges-app.js';
 
 export class BadgesList extends LitElement {
@@ -12,64 +12,117 @@ export class BadgesList extends LitElement {
       badgeTitle: { type: String },
       badgeDesc: { type: String },
       badgeImg: { type: String },
+      author: { type: String },
+      accent: { type: String },
     };
   }
 
   constructor() {
     super();
-    this.badges = [];
-    this.badgeTitle = [];
-    this.badgeDesc = [];
-    this.badgeImg = [];
-    this.updateBadges();
-  }
-
-  updateBadges() {
-    const address = new URL('../api/badges', import.meta.url).href;
-    fetch(address)
-      .then(response => {
-        if (response.ok) {
-          return response.json();
-        }
-        return [];
-      })
-      .then(data => {
-        this.badges = data;
-      });
+    this.badgeTitle = 'badge 1';
+    this.badgeDesc = 'desc of badge 1';
+    this.badgeImg = 'img of badge 1';
+    this.author = 'author1';
   }
 
   static get styles() {
     return css`
-      :host {
-        display: block;
+      .page {
+        background-color: #e9ecf3;
+        display: inline-block;
       }
+
       .wrapper {
-        border: 2px solid black;
-        display: flex;
+        background-color: #3e98d3;
+        color: white;
+        padding: 2px 2px 2px 20px;
+        text-align: center;
+        width: 400px;
+        height: auto;
+        border-radius: 5px;
+        display: inline-block;
       }
-      .item {
-        display: inline-flex;
+
+      .badge-text {
+        background-color: white;
+        color: black;
+        text-align: left;
+        padding: 2px 2px 2px 5px;
+        word-break: break-word;
+        font-size: 20px;
+        font-family: 'effra', sans-serif;
+        font-size: 24px;
+        font-weight: 300;
+      }
+
+      .author {
+        font-size: 13px;
+      }
+
+      .badge-title {
+        background-color: lightblue;
+        color: white;
+        padding: 10px 8px;
+        text-align: left;
+        border-radius: 5px;
+        color: black;
+      }
+
+      .heading {
+        font-size: 32px;
+      }
+
+      .bot-block {
+        color: black;
+        padding: 12px 20px 15px 20px;
+        margin: 25px;
+        background-color: white;
+        display: inline-block;
+      }
+
+      .badge-img {
+        text-align: right;
+        background-color: white;
+      }
+
+      .author {
+        background-color: white;
+        text-align: left;
+        color: black;
+        padding: 2px 2px 2px 5px;
       }
     `;
   }
 
   render() {
     return html`
-      <h2>${this.badges}</h2>
-      <div class="wrapper">
-        ${this.badges.map(
-          badge => html`
-            <div class="item">
-              <badges-app
-                name="${badge.badgeTitle}"
-                description="${badge.badgeDesc}"
-                image="${badge.badgeImg}"
-                author="${badge.author}"
-              ></badges-app>
+      <div class="bot-block">
+        <div class="accent"></div>
+        <div class="badge-text">
+          <div class="heading">
+            <p>${this.badgeTitle}</p>
+          </div>
+          <div
+            style="display: flex; flex-direction: row; justify-content: space-between; padding-top: 4px;"
+          >
+            <div class="badge-text">
+              <p>${this.badgeText}</p>
             </div>
-          `
-        )}
+            <div class="badge-img">
+              <simple-icon
+                accent-color="${this.accent}"
+                icon="${this.badgeImg}"
+              >
+              </simple-icon>
+            </div>
+          </div>
+          <div class="author">
+            <p>${this.author}</p>
+          </div>
+        </div>
       </div>
     `;
   }
 }
+
+customElements.define('badges-list', BadgesList);

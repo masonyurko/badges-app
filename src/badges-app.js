@@ -2,7 +2,7 @@ import { LitElement, html, css } from 'lit';
 import '@lrnwebcomponents/simple-icon/simple-icon.js';
 import '@lrnwebcomponents/simple-icon/lib/simple-icons.js';
 
-export class BadgesApp extends LitElement {
+class BadgesApp extends LitElement {
   static get properties() {
     return {
       badgeTitle: {
@@ -18,34 +18,58 @@ export class BadgesApp extends LitElement {
       author: {
         type: String,
       },
+      badges: { type: Array },
     };
   }
 
-  static get styles() {
-    return css`
-      .wrapper {
-        width: 400px;
-        border: 2px solid black;
-        display: inline-flex;
-      }
-
-      .image {
-        width: 400px;
-      }
-    `;
-  }
+  static styles = css`
+    .results {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  `;
 
   constructor() {
     super();
-    this.badgeImg = new URL('../assets/');
-    this.badgeTitle = 'Technology and Information';
-    this.badgeDesc = 'APA Style Citations: Introduction';
-    this.author = 'Victoria Raish';
+    this.badges = [];
+    this.populate();
+  }
+
+  populate() {
+    const address = '../api/badges';
+    fetch(address)
+      .then(response => {
+        if (response.ok) {
+          return response.json();
+        }
+        return [];
+      })
+      .then(data => {
+        this.badges = data;
+      });
   }
 
   render() {
-    return html` <div class="wrapper">
-      <div class="container"></div>
-    </div>`;
+    return html`
+      <div class="results">
+        ${this.badges.map(
+          badge => html`
+            <badges-list
+              name="${badge.badgeTitle}"
+              description="${badge.badgeDesc}"
+              image="${badge.badgeImg}"
+              author="${badge.author}"
+            ></badges-list>
+          `
+        )}
+      </div>
+    `;
   }
 }
+
+customElements.define('badges-app', BadgesApp);

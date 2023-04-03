@@ -1,7 +1,7 @@
 export default async function handler(request, res) {
   const badges = [
     {
-      badgeImg: '',
+      badgeIcon: 'hardware:router',
       badgeTitle: 'Technology & Information',
       badgeDesc: 'APA Style Citations: Introduction',
       author: 'Victoria Raish',
