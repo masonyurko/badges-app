@@ -42,18 +42,20 @@ class BadgesApp extends LitElement {
 
   render() {
     return html`
-      <div class="results">
-        ${this.badges.map(
-          badge => html`
-            <badges-list
-              name="${badge.badgeTitle}"
-              description="${badge.badgeDesc}"
-              image="${badge.badgeImg}"
-              author="${badge.author}"
-            ></badges-list>
-          `
-        )}
-      </div>
+      <main>
+        <div class="results">
+          ${this.badges.map(
+            badge => html`
+              <badges-list
+                name="${badge.badgeTitle}"
+                description="${badge.badgeDesc}"
+                image="${badge.badgeImg}"
+                author="${badge.author}"
+              ></badges-list>
+            `
+          )}
+        </div>
+      </main>
     `;
   }
 }
