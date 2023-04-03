@@ -78,9 +78,9 @@ export class BadgesList extends LitElement {
 
   constructor() {
     super();
-    this.badgeTitle = 'badgeTitle';
-    this.badgeDesc = 'badgeDesc';
-    this.badgeImg = 'badgeImg';
+    this.badgeTitle = 'badgeTitle1';
+    this.badgeDesc = 'badgeDesc1';
+    this.badgeImg = 'badgeImg1';
     this.author = 'author1';
   }
 
