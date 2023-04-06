@@ -26,15 +26,12 @@ export class BadgesList extends LitElement {
         display: inline-block;
       }
 
-      .wrapper {
-        background-color: #3e98d3;
-        color: white;
-        padding: 2px 2px 2px 20px;
-        text-align: left;
-        width: 400px;
-        height: auto;
-        border-radius: 5px;
-        display: inline-block;
+      .accent {
+        width: 12px;
+        height: 112px;
+        background-color: #4e97d1;
+        border-top-left-radius: 6px;
+        border-bottom-left-radius: 6px;
       }
 
       .badge-text {
