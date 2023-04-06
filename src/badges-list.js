@@ -30,11 +30,10 @@ export class BadgesList extends LitElement {
         background-color: #3e98d3;
         color: white;
         padding: 2px 2px 2px 20px;
-        text-align: left;
+        text-align: center;
         width: 400px;
         height: auto;
         border-radius: 5px;
-        display: inline-block;
       }
 
       .badge-text {
@@ -49,27 +48,17 @@ export class BadgesList extends LitElement {
         font-weight: 300;
       }
 
-      .author {
-        font-size: 13px;
-      }
-
       .badge-title {
         background-color: lightblue;
         color: white;
         text-align: left;
+        padding: 10px 8px;
         border-radius: 5px;
         color: black;
       }
 
       .heading {
         font-size: 32px;
-      }
-
-      .bot-block {
-        color: black;
-        padding: 0px 0px 0px 20px;
-        background-color: white;
-        display: inline-block;
       }
 
       .badge-img {
@@ -107,7 +96,7 @@ export class BadgesList extends LitElement {
               style="display: flex; flex-direction: row; justify-content: space-between; padding-top: 4px;"
             >
               <div class="badge-text">
-                <p>${this.badgeText}</p>
+                <p>${this.badgeDesc}</p>
               </div>
               <div class="badge-img">
                 <simple-icon
