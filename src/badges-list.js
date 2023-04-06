@@ -67,7 +67,7 @@ export class BadgesList extends LitElement {
 
       .bot-block {
         color: black;
-        padding: 12px 50px 15px 50px;
+        padding: 12px 20px 15px 20px;
         margin: 50px;
         background-color: white;
         display: inline-block;
@@ -119,7 +119,7 @@ export class BadgesList extends LitElement {
               </div>
             </div>
             <div class="author">
-              <p>${this.author}</p>
+              <p>Creator: "${this.author}"</p>
             </div>
           </div>
         </div>
