@@ -80,9 +80,9 @@ export class BadgesList extends LitElement {
 
   constructor() {
     super();
-    this.name = 'badgeTitle';
-    this.description = 'badgeDesc';
-    this.image = 'save';
+    this.badgeTitle = 'badgeTitle';
+    this.badgeDesc = 'badgeDesc';
+    this.badgeImg = 'save';
     this.author = 'author';
     this.color = 'blue';
   }
