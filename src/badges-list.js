@@ -99,7 +99,7 @@ export class BadgesList extends LitElement {
                 <p>${this.badgeDesc}</p>
               </div>
               <div class="badge-img">
-                <simple-icon class="course-icon" accent-color="blue"
+                <simple-icon class="course-icon" accent-color="${this.color}"
                   icon="${this.badgeImg}"
                 >
                 </simple-icon>
