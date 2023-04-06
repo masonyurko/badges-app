@@ -7,7 +7,8 @@ class BadgesApp extends LitElement {
     searchBoxDesc: { type: String },
     badgesDesc: {type: String},
     explore: {type: String},
-    input: {type: String}
+    input: {type: String},
+    items: {type: Array}
   };
 
 
@@ -16,19 +17,23 @@ class BadgesApp extends LitElement {
     this.searchBoxDesc = 'Explore our content in a self guided manner. Want us to guide you through learning new skills? Try out Missions. Looking for other people with similar focus? Find them in Groups. Interested in viewing all the options within a certain subject area? You can do that with Topics.';
     this.badgesDesc = 'Looking for something brand spankin new? Here are the most recently added badges!'
     this.explore = 'Explore';
-    
+    this.placeholder = 'Search Content, Topics and People';
   }
 
   handleInput(e) {
     this.input = e.target.value;
   }
 
+  
+
+  
+
   static styles = css`
 
       .app-container {
         padding-top: 50px;
         background-color: lightgray;
-        padding-bottom: 60px;
+        padding-bottom: 500px;
       }
 
       .explore {
@@ -85,10 +90,6 @@ class BadgesApp extends LitElement {
         font-family: sans-serif;
       }
 
-    
-
-    
-
   `;
 
   render() {
@@ -99,9 +100,11 @@ class BadgesApp extends LitElement {
         <label class='explore'>${this.explore}</label>
         <div class="search-container">
           <div class="search-desc">${this.searchBoxDesc}</div>
-          <input type="text" id="getme" @input="${this.handleInput}" placeholder="Search Content, Topics and People"/>
-          <simple-icon accent-color="black" icon="search">
-          </simple-icon>
+          <div class="search-bar">
+            <simple-icon accent-color="black" icon="search">
+            </simple-icon>
+            <input type="text" id="getme" @input="${this.handleInput}" placeholder="${this.placeholder}"/>
+          </div>
         </div>
         
       <div class="badges-container">
