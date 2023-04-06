@@ -28,6 +28,13 @@ export default async function handler(request, res) {
       author: 'Allain Daigle',
       color: 'green',
     },
+    {
+      badgeImg: 'hardware:keyboard',
+      badgeTitle: 'IST Professor',
+      badgeDesc: 'How to Code Stuff',
+      author: 'Bryan Ollendyke',
+      color: 'purple',
+    },
   ];
 
   res.setHeader('Cache-Control', 'max-age=0, s-maxage=1800');
