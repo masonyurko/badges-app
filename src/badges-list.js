@@ -41,7 +41,7 @@ export class BadgesList extends LitElement {
         background-color: white;
         color: black;
         text-align: left;
-        padding: 2px 2px 2px 5px;
+        padding: 0px 0px 0px 5px;
         word-break: break-word;
         font-size: 20px;
         font-family: 'effra', sans-serif;
@@ -89,9 +89,9 @@ export class BadgesList extends LitElement {
 
   constructor() {
     super();
-    this.badgeTitle = 'badge 1';
-    this.badgeDesc = 'desc of badge 1';
-    this.badgeImg = 'img of badge 1';
+    this.badgeTitle = 'badge1';
+    this.badgeDesc = 'badgeDesc';
+    this.badgeImg = 'badgeImg';
     this.author = 'author1';
   }
 
@@ -119,7 +119,7 @@ export class BadgesList extends LitElement {
               </div>
             </div>
             <div class="author">
-              <p>Creator: "${this.author}"</p>
+              <p>Creator: ${this.author}</p>
             </div>
           </div>
         </div>
