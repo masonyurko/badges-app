@@ -56,7 +56,6 @@ export class BadgesList extends LitElement {
         color: white;
         text-align: left;
         padding: 10px 8px;
-        border-radius: 1px;
         color: black;
       }
 
