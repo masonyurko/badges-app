@@ -93,7 +93,7 @@ export class BadgesList extends LitElement {
 
   render() {
     return html`
-      <div class="wrapper">
+      <div class="accent">
         <div class="bot-block">
           <div class="accent"></div>
           <div class="badge-text">
