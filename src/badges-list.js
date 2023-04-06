@@ -67,7 +67,7 @@ export class BadgesList extends LitElement {
 
       .bot-block {
         color: black;
-        padding: 12px 0px 15px 0px;
+        padding: 12px 50px 15px 50px;
         margin: 50px;
         background-color: white;
         display: inline-block;
