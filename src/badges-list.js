@@ -27,8 +27,8 @@ export class BadgesList extends LitElement {
       }
 
       simple-icon {
-        width: 100px;
-        height: 100px;
+        --simple-icon-width: 100px;
+        --simple-icon-height: 100px;
       }
 
       .wrapper {
