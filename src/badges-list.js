@@ -88,7 +88,7 @@ export class BadgesList extends LitElement {
     this.badgeDesc = 'badgeDesc';
     this.badgeImg = 'icon image';
     this.author = 'author';
-    this.color = 'background color';
+    this.color = 'wrapper color';
   }
 
   render() {
@@ -103,7 +103,7 @@ export class BadgesList extends LitElement {
                 <p>${this.badgeDesc}</p>
               </div>
               <div class="badge-img">
-                <simple-icon class="course-icon" accent-color='blue'
+                <simple-icon class="course-icon" accent-color="blue"
                   icon="${this.badgeImg}"
                 >
                 </simple-icon>
