@@ -34,7 +34,7 @@ export class BadgesList extends LitElement {
       .wrapper {
         background-color: #3e98d3;
         color: white;
-        padding: 0px 0px 0px 0px;
+        padding: 2px 2px 2px 20px;
         text-align: center;
         width: 400px;
         height: auto;
