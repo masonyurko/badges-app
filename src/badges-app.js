@@ -39,7 +39,6 @@ class BadgesApp extends LitElement {
 
     .container {
       width: 100%;
-      border: 2px solid black;
       display: inline-flex;
     }
   `;
