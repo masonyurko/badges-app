@@ -35,9 +35,6 @@ class BadgesApp extends LitElement {
       flex-direction: row;
       justify-content: flex-start;
       flex-wrap: wrap;
-      gap: 10px;
-      margin-left: 10px;
-      margin-right: 0px;
     }
 
     .container {
