@@ -39,6 +39,7 @@ export class BadgesList extends LitElement {
         width: 400px;
         height: auto;
         border-radius: 5px;
+        margin-left: 5px;
       }
 
       .badge-text {
