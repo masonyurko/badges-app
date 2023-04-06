@@ -102,7 +102,7 @@ export class BadgesList extends LitElement {
         <div class="bot-block">
           <div class="accent"></div>
           <div class="badge-text">
-            <div class="heading">
+            <div class="badge-title">
               <p>${this.badgeTitle}</p>
             </div>
             <div
