@@ -52,6 +52,7 @@ class BadgesApp extends LitElement {
                 description="${badge.badgeDesc}"
                 image="${badge.badgeImg}"
                 author="${badge.author}"
+                color="${badge.color}"
               >
               </badges-list>
             `

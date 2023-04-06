@@ -15,7 +15,7 @@ export class BadgesList extends LitElement {
       badgeDesc: { type: String },
       badgeImg: { type: String },
       author: { type: String },
-      accent: { type: String },
+      color: { type: String },
     };
   }
 
@@ -90,27 +90,21 @@ export class BadgesList extends LitElement {
     return html`
       <div class="wrapper">
         <div class="bot-block">
-          <div class="accent"></div>
-          <div class="badge-text">
+          <div class="color"></div>
             <div class="badge-title">
               <p>${this.badgeTitle}</p>
             </div>
-            <div
-              style="display: flex; flex-direction: row; justify-content: space-between; padding-top: 4px;"
-            >
               <div class="badge-text">
                 <p>${this.badgeDesc}</p>
               </div>
               <div class="badge-img">
-                <simple-icon
-                  accent-color="${this.accent}"
+                <simple-icon class="course-icon" accent-color="blue"
                   icon="${this.badgeImg}"
                 >
                 </simple-icon>
               </div>
-            </div>
             <div class="author">
-              <p>Creator: ${this.author}</p>
+              <span>Creator: ${this.author}</span>
             </div>
           </div>
         </div>
