@@ -61,7 +61,7 @@ export class BadgesList extends LitElement {
       }
 
       .bot-block {
-        gap: 10px;
+        padding: 10px;
       }
 
       .heading {
