@@ -32,7 +32,7 @@ export class BadgesList extends LitElement {
       }
 
       .wrapper {
-        background-color: #3e98d3;
+        background-color: {color};
         color: white;
         padding: 2px 2px 2px 20px;
         text-align: center;
@@ -93,7 +93,7 @@ export class BadgesList extends LitElement {
 
   render() {
     return html`
-      <div class="wrapper" background-color="${this.color}">
+      <div class="wrapper">
         
         <div class="bot-block">
           <div class="color"></div>
