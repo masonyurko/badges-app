@@ -24,7 +24,6 @@ export class BadgesList extends LitElement {
       .page {
         background-color: #e9ecf3;
         display: inline-block;
-        padding: 10px;
       }
 
       simple-icon {
@@ -89,12 +88,13 @@ export class BadgesList extends LitElement {
     this.badgeDesc = 'badgeDesc';
     this.badgeImg = 'icon image';
     this.author = 'author';
-    this.color = 'icon color';
+    this.color = 'background color';
   }
 
   render() {
     return html`
-      <div class="wrapper">
+      <div class="wrapper" background-color="${this.color}">
+        
         <div class="bot-block">
           <div class="color"></div>
             <div class="badge-title">
@@ -104,7 +104,7 @@ export class BadgesList extends LitElement {
                 <p>${this.badgeDesc}</p>
               </div>
               <div class="badge-img">
-                <simple-icon class="course-icon" accent-color="${this.color}"
+                <simple-icon class="course-icon" accent-color="blue"
                   icon="${this.badgeImg}"
                 >
                 </simple-icon>
