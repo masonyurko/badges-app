@@ -84,7 +84,7 @@ export class BadgesList extends LitElement {
     this.badgeDesc = 'badgeDesc';
     this.badgeImg = 'save';
     this.author = 'author';
-    this.color = 'color';
+    this.color = 'icon color';
   }
 
   render() {
