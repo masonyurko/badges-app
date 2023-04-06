@@ -60,9 +60,6 @@ export class BadgesList extends LitElement {
         color: black;
       }
 
-      .bot-block {
-      }
-
       .heading {
         font-size: 32px;
       }
