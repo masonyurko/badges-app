@@ -41,7 +41,7 @@ export class BadgesList extends LitElement {
         background-color: white;
         color: black;
         text-align: left;
-        padding: 0px 0px 0px 5px;
+        padding: 2px 2px 2px 5px;
         word-break: break-word;
         font-size: 20px;
         font-family: 'effra', sans-serif;
@@ -67,7 +67,7 @@ export class BadgesList extends LitElement {
 
       .bot-block {
         color: black;
-        padding: 0px 0px 0px 0px;
+        padding: 12px 20px 15px 20px;
         margin: 50px;
         background-color: white;
         display: inline-block;
