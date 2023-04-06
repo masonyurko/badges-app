@@ -24,6 +24,7 @@ export class BadgesList extends LitElement {
       .page {
         background-color: #e9ecf3;
         display: inline-block;
+        padding: 10px;
       }
 
       simple-icon {
