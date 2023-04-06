@@ -13,13 +13,13 @@ export default async function handler(request, res) {
       author: 'Cassie Rosas-Carson',
     },
     {
-      badgeImg: '',
+      badgeImg: 'hardware:router',
       badgeTitle: 'Professional Skills',
       badgeDesc: 'IST Careers - Meet a Coach - level 2',
       author: 'Rita Griffith',
     },
     {
-      badgeImg: '',
+      badgeImg: 'hardware:computer',
       badgeTitle: 'Agriculture and Natural Resources',
       badgeDesc: '[test] Treat Yourself',
       author: 'Allain Daigle',

@@ -67,7 +67,7 @@ export class BadgesList extends LitElement {
 
       .bot-block {
         color: black;
-        padding: 0px;
+        padding: 0px 0px 0px 20px;
         background-color: white;
         display: inline-block;
       }
@@ -88,10 +88,10 @@ export class BadgesList extends LitElement {
 
   constructor() {
     super();
-    this.badgeTitle = 'badge1';
+    this.badgeTitle = 'badgeTitle';
     this.badgeDesc = 'badgeDesc';
     this.badgeImg = 'badgeImg';
-    this.author = 'author1';
+    this.author = 'author';
   }
 
   render() {

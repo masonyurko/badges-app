@@ -1,5 +1,6 @@
 import { LitElement, html, css } from 'lit';
 import './badges-list.js';
+import '../api/badges.js';
 
 class BadgesApp extends LitElement {
   static get properties() {
@@ -51,7 +52,8 @@ class BadgesApp extends LitElement {
                 description="${badge.badgeDesc}"
                 image="${badge.badgeImg}"
                 author="${badge.author}"
-              ></badges-list>
+              >
+              </badges-list>
             `
           )}
         </div>
