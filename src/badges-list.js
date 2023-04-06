@@ -26,12 +26,15 @@ export class BadgesList extends LitElement {
         display: inline-block;
       }
 
-      .accent {
-        width: 12px;
-        height: 112px;
-        background-color: #4e97d1;
-        border-top-left-radius: 6px;
-        border-bottom-left-radius: 6px;
+      .wrapper {
+        background-color: #3e98d3;
+        color: white;
+        padding: 2px 2px 2px 20px;
+        text-align: left;
+        width: 400px;
+        height: auto;
+        border-radius: 5px;
+        display: inline-block;
       }
 
       .badge-text {
@@ -93,7 +96,7 @@ export class BadgesList extends LitElement {
 
   render() {
     return html`
-      <div class="accent">
+      <div class="wrapper">
         <div class="bot-block">
           <div class="accent"></div>
           <div class="badge-text">
