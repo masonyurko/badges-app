@@ -82,7 +82,7 @@ export class BadgesList extends LitElement {
     super();
     this.badgeTitle = 'My Badge';
     this.badgeDesc = 'badgeDesc';
-    this.badgeImg = 'save';
+    this.badgeImg = 'icon image';
     this.author = 'author';
     this.color = 'icon color';
   }
