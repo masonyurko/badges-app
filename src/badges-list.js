@@ -41,10 +41,8 @@ export class BadgesList extends LitElement {
         color: black;
         text-align: left;
         padding: 2px 2px 2px 5px;
-        word-break: break-word;
         font-size: 20px;
         font-family: 'effra', sans-serif;
-        font-size: 24px;
         font-weight: 300;
       }
 
