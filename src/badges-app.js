@@ -1,6 +1,8 @@
 import { LitElement, html, css } from 'lit';
 import './badges-list.js';
 import '../api/badges.js';
+import '@lrnwebcomponents/simple-icon/simple-icon.js';
+import '@lrnwebcomponents/simple-icon/lib/simple-icons.js';
 
 class BadgesApp extends LitElement {
   static get properties() {
@@ -125,7 +127,6 @@ class BadgesApp extends LitElement {
             />
           </div>
         </div>
-
         <div class="badges-container">
           <label class="badges-desc">${this.badgesDesc}</label>
           <div class="results">

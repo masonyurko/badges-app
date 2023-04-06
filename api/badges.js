@@ -35,6 +35,13 @@ export default async function handler(request, res) {
       author: 'Bryan Ollendyke',
       color: 'purple',
     },
+    {
+      badgeImg: 'motorcycle',
+      badgeTitle: 'Extreme Sports',
+      badgeDesc: 'How to Ride a Motorcycle',
+      author: 'Harley Davidson',
+      color: 'red',
+    },
   ];
 
   res.setHeader('Cache-Control', 'max-age=0, s-maxage=1800');
