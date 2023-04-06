@@ -56,6 +56,7 @@ export class BadgesList extends LitElement {
         color: white;
         text-align: left;
         padding: 10px 8px;
+        border-radius: 5px;
         color: black;
       }
 
@@ -81,7 +82,7 @@ export class BadgesList extends LitElement {
     super();
     this.badgeTitle = 'badgeTitle';
     this.badgeDesc = 'badgeDesc';
-    this.badgeImg = 'badgeImg';
+    this.badgeImg = 'save';
     this.author = 'author';
   }
 

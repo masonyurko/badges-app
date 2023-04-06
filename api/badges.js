@@ -1,5 +1,5 @@
 export default async function handler(request, res) {
-  const badges = [
+  const badge = [
     {
       badgeImg: 'hardware:router',
       badgeTitle: 'Technology & Information',
@@ -37,5 +37,5 @@ export default async function handler(request, res) {
     'Access-Control-Allow-Headers',
     'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
   );
-  res.json(badges);
+  res.json(badge);
 }
