@@ -50,9 +50,9 @@ class BadgesApp extends LitElement {
           ${this.badges.map(
             badge => html`
               <badges-list
-                name="${badge.badgeTitle}"
-                description="${badge.badgeDesc}"
-                image="${badge.badgeImg}"
+                badgeTitle="${badge.badgeTitle}"
+                badgeDesc="${badge.badgeDesc}"
+                badgeImg="${badge.badgeImg}"
                 author="${badge.author}"
                 color="${badge.color}"
               >
