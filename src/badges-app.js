@@ -39,11 +39,17 @@ class BadgesApp extends LitElement {
       margin-left: 10px;
       margin-right: 0px;
     }
+
+    .container {
+      width: 100%;
+      border: 2px solid black;
+      display: inline-flex;
+    }
   `;
 
   render() {
     return html`
-      <main>
+    <div class="container"></div>
         <div class="results">
           ${this.badges.map(
             badge => html`
@@ -58,7 +64,7 @@ class BadgesApp extends LitElement {
             `
           )}
         </div>
-      </main>
+      </div>
     `;
   }
 }
