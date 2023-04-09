@@ -93,9 +93,10 @@ class BadgesApp extends LitElement {
     }
 
     .badges-desc {
-      font-size: 20px;
+      font-size: 24px;
       font-weight: bold;
       padding-bottom: 20px;
+      overflow-wrap: break-word;
     }
     .badges-container {
       margin: 10px;
