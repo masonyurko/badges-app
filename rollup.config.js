@@ -26,8 +26,6 @@ export default {
       injectServiceWorker: true,
       serviceWorkerPath: 'dist/sw.js',
     }),
-    /** Resolve bare module imports */
-    nodeResolve(),
     copy({
       targets: [
         {
@@ -36,6 +34,8 @@ export default {
         },
       ],
     }),
+    /** Resolve bare module imports */
+    nodeResolve(),
     /** Minify JS, compile JS to a lower language target */
     esbuild({
       minify: true,
