@@ -107,8 +107,8 @@ class BadgesApp extends LitElement {
       font-family: sans-serif;
     }
 
-    .label {
-      font-size: 32px;
+    .badgeDesc {
+      font-size: 24px;
       font-family: sans-serif;
       overflow-wrap: break-word;
     }
