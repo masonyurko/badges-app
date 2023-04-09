@@ -39,16 +39,16 @@ export default async function handler(req, res) {
     },
     {
       badgeImg: 'motorcycle',
-      badgeTitle: 'Extreme Sports',
+      badgeTitle: 'Sports and Entertainment',
       badgeDesc: 'How to Ride a Motorcycle',
       author: 'Harley Davidson',
       color: 'blue',
     },
     {
-      badgeImg: '',
-      badgeTitle: 'Football',
-      badgeDesc: 'How to Play Quarterback in Football',
-      author: 'Jalen Hurts',
+      badgeImg: 'places:fitness-center',
+      badgeTitle: 'Gym and Fitness',
+      badgeDesc: 'How to Become Strong',
+      author: 'Arnold Schwarzenegger',
       color: 'blue',
     },
     {
