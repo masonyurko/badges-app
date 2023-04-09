@@ -32,7 +32,7 @@ export default async function handler(req, res) {
     },
     {
       badgeImg: 'hardware:keyboard',
-      badgeTitle: 'IST Professor',
+      badgeTitle: 'Information Science and Technology',
       badgeDesc: 'How to Code Stuff',
       author: 'Bryan Ollendyke',
       color: 'blue',

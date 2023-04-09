@@ -29,6 +29,7 @@ export class BadgesList extends LitElement {
       simple-icon {
         --simple-icon-width: 100px;
         --simple-icon-height: 100px;
+        padding-right: 20px;
       }
 
       .wrapper {
@@ -60,6 +61,11 @@ export class BadgesList extends LitElement {
         padding: 10px 8px;
         border-radius: 5px;
         color: black;
+        font-size: 16px;
+      }
+
+      ::-webkit-scrollbar {
+        width: 10px;
       }
 
       .heading {
