@@ -23,7 +23,7 @@ export class SearchBar extends LitElement {
         position: absolute;
       }
       #searchBar {
-        width: 120%;
+        width: 100%;
         margin: left;
         box-sizing: border-box;
         border: 1px solid #c8c8c8;
