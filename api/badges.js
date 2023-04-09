@@ -63,6 +63,7 @@ export default async function handler(req, res) {
   badges.map(badge => {
     // eslint-disable-next-line prefer-template, no-param-reassign
     badge.index =
+      // eslint-disable-next-line prefer-template
       badge.badgeTitle.toLowerCase() +
       ' ' +
       badge.badgeDesc.toLowerCase() +
@@ -73,8 +74,6 @@ export default async function handler(req, res) {
   badges = badges.filter(
     badge => badge.index.indexOf(search.toLowerCase()) > -1
   );
-
-  console.log(badges);
   res.setHeader('Cache-Control', 'max-age=0, s-maxage=1800');
   res.setHeader('Access-Control-Allow-Credentials', 'true');
   res.setHeader('Access-Control-Allow-Origin', '*');

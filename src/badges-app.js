@@ -1,6 +1,7 @@
 import { LitElement, html, css } from 'lit';
 import './badges-list.js';
 import '../api/badges.js';
+import './search-bar.js';
 import '@lrnwebcomponents/simple-icon/simple-icon.js';
 import '@lrnwebcomponents/simple-icon/lib/simple-icons.js';
 
@@ -26,7 +27,6 @@ class BadgesApp extends LitElement {
     this.badgesDesc =
       'Looking for something brand spankin new? Here are the most recently added badges!';
     this.explore = 'Explore';
-    this.placeholder = 'Search Content, Topics and People';
   }
 
   // eslint-disable-next-line class-methods-use-this
@@ -39,14 +39,17 @@ class BadgesApp extends LitElement {
         }
         return [];
       })
-      .then(data => data);
+      // eslint-disable-next-line arrow-body-style
+      .then(data => {
+        return data;
+      });
 
     return results;
   }
 
   async _handleSearchEvent(e) {
     const term = e.detail.value;
-    this.players = await this.updateBadge(term);
+    this.badges = await this.updateBadge(term);
   }
 
   static styles = css`
