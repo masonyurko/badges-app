@@ -123,9 +123,7 @@ class BadgesApp extends LitElement {
         <label class="explore">${this.explore}</label>
         <div class="search-container">
           <div class="search-desc">${this.searchBoxDesc}</div>
-          <div class="search-bar">
-            <simple-icon accent-color="black" icon="icons:search">
-            </simple-icon>
+          <div class="search">
             <search-bar
               @value-changed="${this._handleSearchEvent}"
             ></search-bar>
