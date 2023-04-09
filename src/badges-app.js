@@ -54,8 +54,9 @@ class BadgesApp extends LitElement {
 
   static styles = css`
     .search {
-      width: 450px;
-      height: 50px;
+      width: 80%;
+      margin: left;
+      padding: 12px;
     }
     .app-container {
       padding-top: 50px;

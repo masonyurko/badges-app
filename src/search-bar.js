@@ -15,22 +15,22 @@ export class SearchBar extends LitElement {
         display: block;
       }
       simple-icon {
-        display: inline-block;
+        display: left;
         --simple-icon-height: 40px;
         --simple-icon-width: 40px;
         padding-right: 5px;
+        padding-top: 3px;
+        position: absolute;
       }
-
       #searchBar {
-        width: 100%;
+        width: 120%;
+        margin: left;
         box-sizing: border-box;
         border: 1px solid #c8c8c8;
         font-size: 16px;
-        background-color: white;
+        background-color: #fff;
         padding: 12px 20px 12px 40px;
         box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.35);
-        background: url('https://img.icons8.com/fluency-systems-regular/512/search--v1.png')
-          no-repeat left;
         background-size: 22px;
       }
     `;
@@ -43,8 +43,15 @@ export class SearchBar extends LitElement {
 
   render() {
     return html`
-      <simple-icon icon="icons:search"></simple-icon>
-      <input type="text" .value="${this.value}" @input="${this._handleInput}" />
+      <div class="search-bar">
+        <simple-icon icon="icons:search"></simple-icon>
+        <input
+          type="text"
+          id="searchBar"
+          placeholder="${this.value}"
+          @input="${this._handleInput}"
+        />
+      </div>
     `;
   }
 
