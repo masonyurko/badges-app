@@ -3,7 +3,7 @@ export default async function handler(req, res) {
   const search = req.query.search || '';
   var badges = [
     {
-      badgeImg: 'hardware:router',
+      badgeImg: 'editor:mode-edit',
       badgeTitle: 'Technology & Information',
       badgeDesc: 'APA Style Citations: Introduction',
       author: 'Victoria Raish',
@@ -17,14 +17,14 @@ export default async function handler(req, res) {
       color: 'blue',
     },
     {
-      badgeImg: 'hardware:router',
+      badgeImg: 'assignment-turned-in',
       badgeTitle: 'Professional Skills',
       badgeDesc: 'IST Careers - Meet a Coach - level 2',
       author: 'Rita Griffith',
       color: 'blue',
     },
     {
-      badgeImg: 'hardware:computer',
+      badgeImg: 'cloud',
       badgeTitle: 'Agriculture and Natural Resources',
       badgeDesc: 'Treat Yourself',
       author: 'Allain Daigle',
@@ -47,15 +47,29 @@ export default async function handler(req, res) {
     {
       badgeImg: '',
       badgeTitle: 'Football',
-      badgeDesc: 'How to Play Football',
+      badgeDesc: 'How to Play Quarterback in Football',
       author: 'Jalen Hurts',
       color: 'blue',
     },
     {
-      badgeImg: '',
-      badgeTitle: 'Basketball',
-      badgeDesc: 'How to Play Basketball',
-      author: 'Joel Embiid',
+      badgeImg: 'image:music-note',
+      badgeTitle: 'Music',
+      badgeDesc: 'How to Compose a Symphony',
+      author: 'Beethoven',
+      color: 'blue',
+    },
+    {
+      badgeImg: 'image:palette',
+      badgeTitle: 'Art',
+      badgeDesc: 'How to Draw a Portrait',
+      author: 'Bob Ross',
+      color: 'blue',
+    },
+    {
+      badgeImg: 'image:photo-camera',
+      badgeTitle: 'Photography',
+      badgeDesc: 'How to Take a Good Photo',
+      author: 'Ansel Adams',
       color: 'blue',
     },
   ];

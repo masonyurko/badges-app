@@ -54,7 +54,8 @@ class BadgesApp extends LitElement {
 
   static styles = css`
     .search {
-      padding-right: 50px;
+      width: 450px;
+      height: 50px;
     }
     .app-container {
       padding-top: 50px;
@@ -86,7 +87,8 @@ class BadgesApp extends LitElement {
     input {
       padding: 5px;
       display: inline-block;
-      width: 800px;
+      width: 1250px;
+      height: 20px;
     }
 
     .badges-desc {
