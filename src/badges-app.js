@@ -80,7 +80,6 @@ class BadgesApp extends LitElement {
       padding-left: 10px;
       padding-right: 10px;
       padding-bottom: 10px;
-
       background-color: white;
       font-family: sans-serif;
     }
@@ -92,7 +91,7 @@ class BadgesApp extends LitElement {
       height: 20px;
     }
 
-    .p {
+    .badges-desc {
       font-size: 72px;
       font-weight: 600;
       padding-bottom: 20px;
