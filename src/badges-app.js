@@ -53,10 +53,9 @@ class BadgesApp extends LitElement {
   }
 
   static styles = css`
-    .search {
-      width: 80%;
-      margin: left;
-      padding: 12px;
+    .searchBar {
+      width: 450px;
+      height: 50px;
     }
     .app-container {
       padding-top: 50px;
@@ -92,12 +91,10 @@ class BadgesApp extends LitElement {
     }
 
     .badges-desc {
-      font-size: 72px;
-      font-weight: 600;
+      font-size: 20px;
+      font-weight: bold;
       padding-bottom: 20px;
-      overflow-wrap: break-word;
     }
-
     .badges-container {
       margin: 10px;
       padding-top: 10px;
@@ -108,6 +105,12 @@ class BadgesApp extends LitElement {
       margin-right: 220px;
       background-color: white;
       font-family: sans-serif;
+    }
+
+    .label {
+      font-size: 32px;
+      font-family: sans-serif;
+      overflow-wrap: break-word;
     }
 
     .results {
