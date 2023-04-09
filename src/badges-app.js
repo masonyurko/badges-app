@@ -12,14 +12,15 @@ class BadgesApp extends LitElement {
       badgesDesc: { type: String },
       explore: { type: String },
       input: { type: String },
-      items: { type: Array },
     };
   }
 
   constructor() {
     super();
     this.badges = [];
-    this.updateBadge();
+    this.updateBadge().then(results => {
+      this.badges = results;
+    });
     this.searchBoxDesc =
       'Explore our content in a self guided manner. Want us to guide you through learning new skills? Try out Missions. Looking for other people with similar focus? Find them in Groups. Interested in viewing all the options within a certain subject area? You can do that with Topics.';
     this.badgesDesc =
@@ -28,22 +29,24 @@ class BadgesApp extends LitElement {
     this.placeholder = 'Search Content, Topics and People';
   }
 
-  handleInput(e) {
-    this.input = e.target.value;
-  }
-
-  updateBadge() {
-    const address = '../api/badges';
-    fetch(address)
+  // eslint-disable-next-line class-methods-use-this
+  async updateBadge(value = '') {
+    const address = `/api/badges?search=${value}`;
+    const results = await fetch(address)
       .then(response => {
         if (response.ok) {
           return response.json();
         }
         return [];
       })
-      .then(data => {
-        this.badges = data;
-      });
+      .then(data => data);
+
+    return results;
+  }
+
+  async _handleSearchEvent(e) {
+    const term = e.detail.value;
+    this.players = await this.updateBadge(term);
   }
 
   static styles = css`
@@ -118,13 +121,11 @@ class BadgesApp extends LitElement {
         <div class="search-container">
           <div class="search-desc">${this.searchBoxDesc}</div>
           <div class="search-bar">
-            <simple-icon accent-color="black" icon="search"> </simple-icon>
-            <input
-              type="text"
-              id="getme"
-              @input="${this.handleInput}"
-              placeholder="${this.placeholder}"
-            />
+            <simple-icon accent-color="black" icon="icons:search">
+            </simple-icon>
+            <search-bar
+              @value-changed="${this._handleSearchEvent}"
+            ></search-bar>
           </div>
         </div>
         <div class="badges-container">
@@ -141,10 +142,9 @@ class BadgesApp extends LitElement {
               >
               </badges-list>
               </div>
-            <div>
-          <div class="input">${this.input}</div>
-        </div>
-            `
+              <div>
+            </div>
+        `
             )}
           </div>
         </div>

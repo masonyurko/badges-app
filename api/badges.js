@@ -1,5 +1,7 @@
-export default async function handler(request, res) {
-  const badges = [
+/* eslint-disable no-var */
+export default async function handler(req, res) {
+  const search = req.query.search || '';
+  var badges = [
     {
       badgeImg: 'hardware:router',
       badgeTitle: 'Technology & Information',
@@ -24,7 +26,7 @@ export default async function handler(request, res) {
     {
       badgeImg: 'hardware:computer',
       badgeTitle: 'Agriculture and Natural Resources',
-      badgeDesc: '[test] Treat Yourself',
+      badgeDesc: 'Treat Yourself',
       author: 'Allain Daigle',
       color: 'blue',
     },
@@ -57,7 +59,22 @@ export default async function handler(request, res) {
       color: 'blue',
     },
   ];
+  // eslint-disable-next-line array-callback-return
+  badges.map(badge => {
+    // eslint-disable-next-line prefer-template, no-param-reassign
+    badge.index =
+      badge.badgeTitle.toLowerCase() +
+      ' ' +
+      badge.badgeDesc.toLowerCase() +
+      ' ' +
+      badge.author.toLowerCase();
+  });
 
+  badges = badges.filter(
+    badge => badge.index.indexOf(search.toLowerCase()) > -1
+  );
+
+  console.log(badges);
   res.setHeader('Cache-Control', 'max-age=0, s-maxage=1800');
   res.setHeader('Access-Control-Allow-Credentials', 'true');
   res.setHeader('Access-Control-Allow-Origin', '*');
