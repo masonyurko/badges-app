@@ -34,12 +34,13 @@ export class BadgesList extends LitElement {
       .wrapper {
         background-color: #3e98d3;
         color: white;
-        padding: 2px 2px 2px 20px;
+        padding: 2px 2px 10px 20px;
         text-align: center;
         width: 400px;
-        height: auto;
+        height: 250px;
         border-radius: 5px;
         margin-left: 5px;
+        margin-top: 5px;
       }
 
       .badge-text {
