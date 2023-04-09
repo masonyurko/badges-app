@@ -24,7 +24,7 @@ export class SearchBar extends LitElement {
 
   constructor() {
     super();
-    this.value = 'Default Value';
+    this.value = 'Search Content, Topics, and People';
   }
 
   render() {
