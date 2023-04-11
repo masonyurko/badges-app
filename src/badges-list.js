@@ -93,11 +93,12 @@ export class BadgesList extends LitElement {
     this.badgeImg = 'icon image';
     this.author = 'author';
     this.color = 'icon color';
+    this.bColor = 'background color';
   }
 
   render() {
     return html`
-      <div class="wrapper">
+      <div class="wrapper"> ${this.bColor}
         <div class="bot-block">
           <div class="color"></div>
             <div class="badge-title">

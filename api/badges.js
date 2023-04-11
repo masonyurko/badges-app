@@ -8,6 +8,7 @@ export default async function handler(req, res) {
       badgeDesc: 'APA Style Citations: Introduction',
       author: 'Victoria Raish',
       color: 'blue',
+      bColor: 'green',
     },
     {
       badgeImg: 'hardware:computer',
@@ -15,6 +16,7 @@ export default async function handler(req, res) {
       badgeDesc: 'IST Career Resources',
       author: 'Cassie Rosas-Carson',
       color: 'blue',
+      bColor: 'red',
     },
     {
       badgeImg: 'assignment-turned-in',
@@ -22,6 +24,7 @@ export default async function handler(req, res) {
       badgeDesc: 'IST Careers - Meet a Coach - level 2',
       author: 'Rita Griffith',
       color: 'blue',
+      bColor: 'blue',
     },
     {
       badgeImg: 'cloud',
@@ -29,6 +32,7 @@ export default async function handler(req, res) {
       badgeDesc: 'Treat Yourself',
       author: 'Allain Daigle',
       color: 'blue',
+      bColor: 'yellow',
     },
     {
       badgeImg: 'hardware:keyboard',
@@ -36,6 +40,7 @@ export default async function handler(req, res) {
       badgeDesc: 'How to Code Stuff',
       author: 'Bryan Ollendyke',
       color: 'blue',
+      bColor: 'pink',
     },
     {
       badgeImg: 'motorcycle',
@@ -43,6 +48,7 @@ export default async function handler(req, res) {
       badgeDesc: 'How to Ride a Motorcycle',
       author: 'Harley Davidson',
       color: 'blue',
+      bColor: 'purple',
     },
     {
       badgeImg: 'places:fitness-center',
